@@ -8,6 +8,10 @@ function binarySearch(list, element) {
         //always recursive in while need reset mid, otherwise mid will always the same number
         mid = Math.floor((start+end)/2);
         if(list[mid]===element){
+            // check if duplicate values in list
+            while (mid > 0 && list[mid - 1] === element) {
+                mid--;
+            }
             return mid;
         } else if(list[mid] > element) {
             end = mid - 1;
@@ -18,7 +22,6 @@ function binarySearch(list, element) {
 
     return -1;
 }
-binarySearch([1, 10, 31], 1);
 // result = binarySearch([-1, 10, 31], 1);
 // console.log(result);
 // get help from TA: Ali
