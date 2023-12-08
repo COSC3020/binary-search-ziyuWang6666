@@ -14,3 +14,4 @@ const testSearch =
     });
 
 jsc.assert(testSearch);
+//get some reference from Dhruv: arr[binarySearch(arr,arr[0])]==arr[0]
